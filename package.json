@@ -1,0 +1,61 @@
+{
+  "name": "react-native-qqsdk",
+  "version": "0.8.3",
+  "description": "react-native wrapper for qq sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "https://github.com/iVanPan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iVanPan/react-native-qqsdk/issues"
+  },
+  "homepage": "https://github.com/iVanPan/react-native-qqsdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iVanPan/react-native-qqsdk.git"
+  },
+  "keywords": [
+    "ecosystem:react-native",
+    "react",
+    "android",
+    "ios",
+    "plugin",
+    "qqsdk",
+    "qq",
+    "Tencent",
+    "login",
+    "share",
+    "favorites"
+  ],
+  "dependencies": {
+    "glob": "^5.0.15",
+    "inquirer": "1.1.2",
+    "plist": "1.2.0",
+    "lodash": "4.17.2",
+    "xcode": "^1.0.0",
+    "path": "^0.12.7"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.40"
+  },
+  "rnpm": {
+    "ios": {
+      "sharedLibraries": [
+        "libz",
+        "libiconv",
+        "libsqlite3",
+        "libstdc++",
+        "Security",
+        "SystemConfiguration",
+        "CoreTelephony",
+        "CoreGraphics"
+      ]
+    },
+    "commands": {
+      "postlink": "node node_modules/react-native-qqsdk/scripts/postlink/postlink",
+      "postunlink": "node node_modules/react-native-qqsdk/scripts/postunlink/postunlink"
+    }
+  }
+}
