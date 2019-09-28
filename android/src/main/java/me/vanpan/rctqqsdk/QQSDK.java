@@ -28,7 +28,7 @@ import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzonePublish;
 import com.tencent.connect.share.QzoneShare;
-import com.tencent.open.GameAppOperation;
+//import com.tencent.open.GameAppOperation;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
@@ -181,17 +181,17 @@ public class QQSDK extends ReactContextBaseJavaModule {
                 promise.reject("500","Android 不支持分享文字到 QQ");
                 break;
             case ShareScene.Favorite:
-                params.putInt(GameAppOperation.QQFAV_DATALINE_REQTYPE, GameAppOperation.QQFAV_DATALINE_TYPE_TEXT);
-                params.putString(GameAppOperation.QQFAV_DATALINE_TITLE, appName);
-                params.putString(GameAppOperation.QQFAV_DATALINE_DESCRIPTION, text);
-                params.putString(GameAppOperation.QQFAV_DATALINE_APPNAME, appName);
-                Runnable favoritesRunnable = new Runnable() {
-                    @Override
-                    public void run() {
-                        mTencent.addToQQFavorites(currentActivity, params, addToQQFavoritesListener);
-                    }
-                };
-                UiThreadUtil.runOnUiThread(favoritesRunnable);
+//                params.putInt(GameAppOperation.QQFAV_DATALINE_REQTYPE, GameAppOperation.QQFAV_DATALINE_TYPE_TEXT);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_TITLE, appName);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_DESCRIPTION, text);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_APPNAME, appName);
+//                Runnable favoritesRunnable = new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        mTencent.addToQQFavorites(currentActivity, params, addToQQFavoritesListener);
+//                    }
+//                };
+//                UiThreadUtil.runOnUiThread(favoritesRunnable);
                 break;
             case ShareScene.QQZone:
                 params.putInt(QzoneShare.SHARE_TO_QZONE_KEY_TYPE, QzonePublish.PUBLISH_TO_QZONE_TYPE_PUBLISHMOOD);
@@ -239,21 +239,21 @@ public class QQSDK extends ReactContextBaseJavaModule {
                 UiThreadUtil.runOnUiThread(qqRunnable);
                 break;
             case ShareScene.Favorite:
-                ArrayList<String> imageUrls = new ArrayList<String>();
-                imageUrls.add(image);
-                params.putInt(GameAppOperation.QQFAV_DATALINE_REQTYPE, GameAppOperation.QQFAV_DATALINE_TYPE_IMAGE_TEXT);
-                params.putString(GameAppOperation.QQFAV_DATALINE_TITLE, title);
-                params.putString(GameAppOperation.QQFAV_DATALINE_DESCRIPTION, description);
-                params.putString(GameAppOperation.QQFAV_DATALINE_IMAGEURL,image);
-                params.putString(GameAppOperation.QQFAV_DATALINE_APPNAME, appName);
-                params.putStringArrayList(GameAppOperation.QQFAV_DATALINE_FILEDATA,imageUrls);
-                Runnable favoritesRunnable = new Runnable() {
-                    @Override
-                    public void run() {
-                        mTencent.addToQQFavorites(currentActivity, params, addToQQFavoritesListener);
-                    }
-                };
-                UiThreadUtil.runOnUiThread(favoritesRunnable);
+//                ArrayList<String> imageUrls = new ArrayList<String>();
+//                imageUrls.add(image);
+//                params.putInt(GameAppOperation.QQFAV_DATALINE_REQTYPE, GameAppOperation.QQFAV_DATALINE_TYPE_IMAGE_TEXT);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_TITLE, title);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_DESCRIPTION, description);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_IMAGEURL,image);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_APPNAME, appName);
+//                params.putStringArrayList(GameAppOperation.QQFAV_DATALINE_FILEDATA,imageUrls);
+//                Runnable favoritesRunnable = new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        mTencent.addToQQFavorites(currentActivity, params, addToQQFavoritesListener);
+//                    }
+//                };
+//                UiThreadUtil.runOnUiThread(favoritesRunnable);
                 break;
             case ShareScene.QQZone:
                 params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
@@ -306,20 +306,20 @@ public class QQSDK extends ReactContextBaseJavaModule {
                 UiThreadUtil.runOnUiThread(qqRunnable);
                 break;
             case ShareScene.Favorite:
-                image = processImage(image);
-                params.putInt(GameAppOperation.QQFAV_DATALINE_REQTYPE, GameAppOperation.QQFAV_DATALINE_TYPE_DEFAULT);
-                params.putString(GameAppOperation.QQFAV_DATALINE_TITLE, title);
-                params.putString(GameAppOperation.QQFAV_DATALINE_DESCRIPTION,description);
-                params.putString(GameAppOperation.QQFAV_DATALINE_IMAGEURL,image);
-                params.putString(GameAppOperation.QQFAV_DATALINE_URL,url);
-                params.putString(GameAppOperation.QQFAV_DATALINE_APPNAME, appName);
-                Runnable favoritesRunnable = new Runnable() {
-                    @Override
-                    public void run() {
-                        mTencent.addToQQFavorites(currentActivity, params, addToQQFavoritesListener);
-                    }
-                };
-                UiThreadUtil.runOnUiThread(favoritesRunnable);
+//                image = processImage(image);
+//                params.putInt(GameAppOperation.QQFAV_DATALINE_REQTYPE, GameAppOperation.QQFAV_DATALINE_TYPE_DEFAULT);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_TITLE, title);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_DESCRIPTION,description);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_IMAGEURL,image);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_URL,url);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_APPNAME, appName);
+//                Runnable favoritesRunnable = new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        mTencent.addToQQFavorites(currentActivity, params, addToQQFavoritesListener);
+//                    }
+//                };
+//                UiThreadUtil.runOnUiThread(favoritesRunnable);
                 break;
             case ShareScene.QQZone:
                 image = processImage(image);
@@ -377,21 +377,21 @@ public class QQSDK extends ReactContextBaseJavaModule {
                 UiThreadUtil.runOnUiThread(qqRunnable);
                 break;
             case ShareScene.Favorite:
-                image = processImage(image);
-                params.putInt(GameAppOperation.QQFAV_DATALINE_REQTYPE, GameAppOperation.QQFAV_DATALINE_TYPE_DEFAULT);
-                params.putString(GameAppOperation.QQFAV_DATALINE_TITLE, title);
-                params.putString(GameAppOperation.QQFAV_DATALINE_DESCRIPTION,description);
-                params.putString(GameAppOperation.QQFAV_DATALINE_IMAGEURL,image);
-                params.putString(GameAppOperation.QQFAV_DATALINE_URL,url);
-                params.putString(GameAppOperation.QQFAV_DATALINE_APPNAME, appName);
-                params.putString(GameAppOperation.QQFAV_DATALINE_AUDIOURL,flashUrl);
-                Runnable favoritesRunnable = new Runnable() {
-                    @Override
-                    public void run() {
-                        mTencent.addToQQFavorites(currentActivity, params, addToQQFavoritesListener);
-                    }
-                };
-                UiThreadUtil.runOnUiThread(favoritesRunnable);
+//                image = processImage(image);
+//                params.putInt(GameAppOperation.QQFAV_DATALINE_REQTYPE, GameAppOperation.QQFAV_DATALINE_TYPE_DEFAULT);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_TITLE, title);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_DESCRIPTION,description);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_IMAGEURL,image);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_URL,url);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_APPNAME, appName);
+//                params.putString(GameAppOperation.QQFAV_DATALINE_AUDIOURL,flashUrl);
+//                Runnable favoritesRunnable = new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        mTencent.addToQQFavorites(currentActivity, params, addToQQFavoritesListener);
+//                    }
+//                };
+//                UiThreadUtil.runOnUiThread(favoritesRunnable);
                 break;
             case ShareScene.QQZone:
                 image = processImage(image);
